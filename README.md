@@ -2,13 +2,13 @@
 
 [![Releases](https://img.shields.io/github/v/release/ministryofjustice/cloud-platform-terraform-template.svg)](https://github.com/ministryofjustice/cloud-platform-terraform-template/releases)
 
-This Terraform module will _create a ..._ for use on the Cloud Platform.
+This Terraform module that deploys Flux Version 2 for use on the Cloud Platform.
 
 ## Usage
 
 ```hcl
-module "template" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-template?ref=version" # use the latest release
+module "flux2" {
+  source = "github.com/ministryofjustice/cloud-platform-terraform-flux2?ref=version" # use the latest release
 
   # Configuration
   # ...

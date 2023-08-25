@@ -2,7 +2,14 @@
 # Configuration #
 #################
 
-# Add module-specific variables here
+variable "activate_helm_controller" {
+  default = true
+}
+
+variable "activate_source_controller" {
+  default = true
+}
+
 
 ########
 # Tags #
@@ -41,3 +48,4 @@ variable "infrastructure_support" {
   description = "The team responsible for managing the infrastructure. Should be of the form <team-name> (<team-email>)"
   type        = string
 }
+
