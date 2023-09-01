@@ -31,16 +31,8 @@ resource "helm_release" "flux2" {
   namespace   = kubernetes_namespace.flux_system.metadata[0].name
   repository = "https://fluxcd-community.github.io/helm-charts"
   chart      = "flux2"
-
-  set {
-    name = "helmController.create"
-    value = var.activate_helm_controller
-  }
-
-  set {
-    name = "sourceController.create"
-    value = var.activate_source_controller
-  }
+  version    = "2.9.2"
+   values = ["${file("${path.module}/templates/values.yaml.tpl")}"]
 
   depends_on = [kubernetes_namespace.flux_system]
 }
