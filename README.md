@@ -26,6 +26,9 @@ module "flux2" {
 
 See the [examples/](examples/) folder for more information.
 
+TODO: 
+- Enforce PSP or Pod Security Standards for the namespace
+- Test with example repo for all controllers
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
